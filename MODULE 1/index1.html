@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Community Event Portal</title>
+
+  <!-- Bootstrap 5 CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+  <style>
+    body {
+      background: #f8f9fa;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .hero {
+      background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+      url('https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&w=1600&q=80');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      padding: 120px 20px;
+      text-align: center;
+    }
+
+
+    .card:hover {
+      transform: scale(1.02);
+      transition: all 0.3s ease-in-out;
+    }
+
+    .footer {
+      background-color: #0d6efd;
+      color: white;
+      padding: 20px 0;
+    }
+
+    .footer i {
+      font-size: 1.5rem;
+      margin: 0 10px;
+    }
+
+    .form-section {
+      background: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .event-video {
+      width: 100%;
+      max-width: 600px;
+      border-radius: 10px;
+      border: 4px solid #198754;
+      margin: 20px auto;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+      <a class="navbar-brand" href="#">Community Events</a>
+      <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div id="navbarContent" class="collapse navbar-collapse">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item"><a href="#" class="nav-link active">Home</a></li>
+          <li class="nav-item"><a href="#events" class="nav-link active">Events</a></li>
+          <li class="nav-item"><a href="#register" class="nav-link active">Register</a></li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" placeholder="Search events" />
+          <button class="btn btn-outline-light">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1 class="display-4 fw-bold">Welcome to Your Local Community Portal</h1>
+      <p class="lead">Explore, join, and celebrate with your neighborhood.</p>
+      <a href="#register" class="btn btn-lg btn-success">Register for an Event</a>
+    </div>
+  </section>
+
+  <!-- Events Section -->
+  <section id="events" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Upcoming Events</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card shadow-sm h-100">
+            <img src="assets/img1.png" class="card-img-top" alt="Tree Plantation">
+            <div class="card-body">
+              <h5 class="card-title">Tree Plantation</h5>
+              <p class="card-text">Join us in making the city greener. Tools and refreshments provided.</p>
+              <button class="btn btn-outline-primary w-100">Join</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card shadow-sm h-100">
+            <img src="assets/img2.png" class="card-img-top" alt="Health Camp">
+            <div class="card-body">
+              <h5 class="card-title">Health Check-up Camp</h5>
+              <p class="card-text">Free medical check-ups and consultation for all community members.</p>
+              <button class="btn btn-outline-primary w-100">Join</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card shadow-sm h-100">
+            <img src="assets/img3.png" class="card-img-top" alt="Culture Fest">
+            <div class="card-body">
+              <h5 class="card-title">Cultural Fest</h5>
+              <p class="card-text">Experience music, dance, and food from all corners of the community.</p>
+              <button class="btn btn-outline-primary w-100">Join</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Registration Section -->
+  <section id="register" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-4">Register for an Event</h2>
+      <div class="row justify-content-center">
+        <div class="col-md-6 form-section">
+          <form>
+            <div class="mb-3">
+              <label class="form-label">Full Name</label>
+              <input type="text" class="form-control" placeholder="John Doe">
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Email Address</label>
+              <input type="email" class="form-control" placeholder="name@example.com">
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Choose Event</label>
+              <select class="form-select">
+                <option selected disabled>Select an event</option>
+                <option>Tree Plantation</option>
+                <option>Health Camp</option>
+                <option>Cultural Fest</option>
+              </select>
+            </div>
+            <div class="form-check mb-3">
+              <input class="form-check-input" type="checkbox" id="termsCheck">
+              <label class="form-check-label" for="termsCheck">I agree to the terms & conditions</label>
+            </div>
+            <button class="btn btn-success w-100">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Media Section -->
+  <section id="media" class="py-5 text-center">
+    <h2>Watch Our Promo</h2>
+    <video class="event-video" controls oncanplay="document.getElementById('videoStatus').textContent = 'Video ready to play';">
+      <source src="assets/promo.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <p id="videoStatus" class="text-success"></p>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer text-center">
+    <div class="container">
+      <p>Follow us on</p>
+      <i class="bi bi-facebook"></i>
+      <i class="bi bi-twitter"></i>
+      <i class="bi bi-instagram"></i>
+      <p class="mt-2 mb-0">© 2025 Community Events Portal</p>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,382 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/* ----------------------------------
+   1. Reset and Base Styling
+---------------------------------- */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+body {
+  background-color: #e0e0e0; /* Fallback color */
+  background-image: url('assets/background.png'); /* Your image path */
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+
+/* ----------------------------------
+   2. Navigation Bar (Centered)
+---------------------------------- */
+
+nav {
+  background-color: #2c3e50; /* HEX */
+  display: flex;
+  justify-content: center;
+  padding: 15px 0;
+}
+
+nav a {
+  color: rgba(255, 255, 255, 0.9); /* RGBA */
+  margin: 0 20px;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+nav a:hover {
+  color: #ffcc00;
+}
+
+
+
+
+/* Highlight message */
+.highlight {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #444;
+  padding: 10px;
+  display: block;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* ----------------------------------
+   4. Section Headers with Gradient
+---------------------------------- */
+
+h2 {
+  background: linear-gradient(to right, #8e2de2, #4a00e0);
+  color: white;
+  padding: 15px;
+  margin-bottom: 15px;
+  font-size: 1.6rem;
+}
+
+/* ----------------------------------
+   Event Card Box Model
+---------------------------------- */
+.eventCard {
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  text-align: center;
+  font-size: 20px;
+}
+/* ----------------------------------
+   Table Styling for Event Gallery
+---------------------------------- */
+
+table {
+  width: 100%;
+  border-collapse: collapse;           /* Ensures clean borders */
+  margin-bottom: 30px;
+  background-color: #ffffff;           /* White table background */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Subtle shadow for depth */
+}
+
+/* Header and cell styling */
+th, td {
+  border: 1px solid #cccccc;           /* Light grey border */
+  padding: 12px 15px;                  /* Adequate spacing */
+  text-align: center;                  /* Center-align text */
+  background-color: #fafafa;           /* Light background for all cells */
+}
+
+/* Zebra striping on even-numbered rows */
+tr:nth-child(even) {
+  background-color: #f0f8ff;           /* Light blue shade */
+}
+
+/* ----------------------------------
+   Event Image Styling Inside Table
+---------------------------------- */
+
+.event-img {
+  width: 100%;
+  height: 200px;                       /* Fixed height */
+  object-fit: cover;                   /* Crop overflow but preserve ratio */
+  display: block;
+  border: 2px solid #ccc;              /* Image border */
+  border-radius: 6px;                  /* Rounded corners */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  transition: transform 0.3s ease;     /* Smooth scale transition */
+}
+
+/* Enlarged image on double click */
+.event-img.enlarged {
+  transform: scale(1.3);
+  z-index: 10;
+  position: relative;
+}
+.caption {
+  text-align: center;
+  text-transform: capitalize;
+  letter-spacing: 0.5px;
+  line-height: 1.4;
+  color: #444;
+  font-style: italic;
+  margin-top: 8px;
+  font-size: 0.95rem;
+}
+
+
+/* ----------------------------------
+   6. Registration
+---------------------------------- */
+
+form {
+  max-width: 600px;
+  background-color: #ffffffdd;
+  margin: 0 auto 40px;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.form-field label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: inherit;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: 2px solid #2196f3;
+}
+
+/* Submit button */
+button[type="submit"] {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+button[type="submit"]:hover {
+  background-color: #218838;
+}
+
+/* feedback form*/
+/* Feedback Form Container */
+form {
+  max-width: 500px;
+  margin: 30px auto;
+  background-color: #ffffff;
+  padding: 25px 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Headings */
+h2, h3 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+/* Labels */
+label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Inputs, Selects, and Textareas */
+input[type="text"],
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: inherit;
+  transition: border-color 0.3s;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Submit Button */
+button[type="submit"] {
+  margin-top: 20px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #218838;
+}
+
+/* Hint Text */
+.hint {
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 5px;
+}
+
+/* Preview Image */
+.preview-image {
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  margin: 20px auto;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+/* Enlarged Image (Optional for JS toggle) */
+.preview-image.enlarged {
+  transform: scale(1.5);
+  z-index: 10;
+}
+
+/* ----------------------------------
+   7. Media Section (Promo Video)
+---------------------------------- */
+
+#media video {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;               /* 💡 This centers the video */
+  display: block;               /* Required for margin auto to work */
+  border: 4px solid #2196f3;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+#media video.enlarged {
+  transform: scale(1.2);
+}
+
+#videoStatus {
+  text-align: center;
+  margin-top: 10px;
+  font-weight: bold;
+  color: #007bff;
+}
+
+/* ----------------------------------
+   8. Geolocation Section
+---------------------------------- */
+
+section:nth-of-type(4) {
+  background-color: #fff3e0;
+  padding: 20px;
+  text-align: center;
+  border-top: 2px solid #ffc107;
+  border-bottom: 2px solid #ffc107;
+}
+
+#locationOutput {
+  margin-top: 10px;
+  color: #e65100;
+  font-weight: bold;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #ff9800;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #fb8c00;
+}
+
+/* ----------------------------------
+   9. Footer
+---------------------------------- */
+
+footer {
+  background-color: #2c3e50;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9rem;
+}
+
+/* ----------------------------------
+   10. Responsive Media Query
+---------------------------------- */
+
+@media screen and (max-width: 768px) {
+  nav {
+    flex-direction: column;
+  }
+
+  nav a {
+    margin: 10px 0;
+  }
+
+  form {
+    width: 90%;
+    padding: 20px;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+    padding: 10px;
+  }
+
+  video {
+    width: 100%;
+  }
+}
